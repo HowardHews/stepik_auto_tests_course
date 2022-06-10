@@ -1,4 +1,6 @@
 import unittest
+from unittest import expectedFailure
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -45,7 +47,7 @@ class TestRegistrationForm(unittest.TestCase):
                 # Assert
                 self.assertEqual(message, registration_result, f"expected {message}, got {registration_result}")
 
-
+    @expectedFailure
     def test_form2(self):
         # Arrange
         link = "https://suninjuly.github.io/registration2.html"
